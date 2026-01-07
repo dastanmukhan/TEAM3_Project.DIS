@@ -1,0 +1,178 @@
+slice_name: Normalization
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 1__table
+  viz_type: table
+  query_mode: aggregate
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    Normalized Amount: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2025-10-10T18:15:08.236148'
+      column_name: amount
+      created_on: '2025-10-10T18:15:08.236148'
+      description: null
+      expression: null
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 5
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      uuid: 26176cb4-bf60-4582-a1ce-a7c6b9b52e3c
+      verbose_name: null
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(amount)
+    optionName: metric_pc4bv7w0blq_pr2xvxtwmu
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2025-10-11T17:08:54.715571'
+      column_name: Normalized Amount
+      created_on: '2025-10-11T17:08:54.715571'
+      description: null
+      expression: "  COALESCE(\r\n    (\r\n      (amount::numeric) - (SELECT MIN(b2.amount)\
+        \ FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT MAX(b2.amount)\
+        \ FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n\
+        \      0\r\n    ),\r\n    0\r\n  ) \r\n"
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 87
+      is_active: true
+      is_dttm: true
+      python_date_format: null
+      type: null
+      type_generic: 2
+      uuid: 47537f81-2a6a-4258-9845-3bd3c83a4b2b
+      verbose_name: Normalized Sum [0,1]
+    aggregate: AVG
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: AVG(Normalized Sum [0,1])
+    optionName: metric_8bbrn7enwo8_aw1c4vx6luc
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2025-10-10T18:15:08.236148'
+      column_name: amount
+      created_on: '2025-10-10T18:15:08.236148'
+      description: null
+      expression: null
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 5
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      uuid: 26176cb4-bf60-4582-a1ce-a7c6b9b52e3c
+      verbose_name: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(amount)
+    optionName: metric_jjd4prmoupr_zuc18tcz0w
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2025-10-11T17:08:54.715571'
+      column_name: Normalized Amount
+      created_on: '2025-10-11T17:08:54.715571'
+      description: null
+      expression: "  COALESCE(\r\n    (\r\n      (amount::numeric) - (SELECT MIN(b2.amount)\
+        \ FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT MAX(b2.amount)\
+        \ FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n\
+        \      0\r\n    ),\r\n    0\r\n  ) \r\n"
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 87
+      is_active: true
+      is_dttm: true
+      python_date_format: null
+      type: null
+      type_generic: 2
+      uuid: 47537f81-2a6a-4258-9845-3bd3c83a4b2b
+      verbose_name: Normalized Sum [0,1]
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(Normalized Sum [0,1])
+    optionName: metric_28mid4f1i3g_dcrvfnstl8
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: Normalized Amount
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_by_cols: []
+  order_desc: true
+  row_limit: 1000
+  server_page_length: 10
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":1,"type":"table"},"force":false,"queries":[{"filters":[{"col":"Normalized
+  Amount","op":"TEMPORAL_RANGE","val":"No filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:15:08.236148","column_name":"amount","created_on":"2025-10-10T18:15:08.236148","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":5,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"uuid":"26176cb4-bf60-4582-a1ce-a7c6b9b52e3c","verbose_name":null},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(amount)","optionName":"metric_pc4bv7w0blq_pr2xvxtwmu"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-11T17:08:54.715571","column_name":"Normalized
+  Amount","created_on":"2025-10-11T17:08:54.715571","description":null,"expression":"  COALESCE(\r\n    (\r\n      (amount::numeric)
+  - (SELECT MIN(b2.amount) FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT
+  MAX(b2.amount) FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n      0\r\n    ),\r\n    0\r\n  )
+  \r\n","extra":"{}","filterable":true,"groupby":true,"id":87,"is_active":true,"is_dttm":true,"python_date_format":null,"type":null,"type_generic":2,"uuid":"47537f81-2a6a-4258-9845-3bd3c83a4b2b","verbose_name":"Normalized
+  Sum [0,1]"},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(Normalized
+  Sum [0,1])","optionName":"metric_8bbrn7enwo8_aw1c4vx6luc"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:15:08.236148","column_name":"amount","created_on":"2025-10-10T18:15:08.236148","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":5,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"uuid":"26176cb4-bf60-4582-a1ce-a7c6b9b52e3c","verbose_name":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(amount)","optionName":"metric_jjd4prmoupr_zuc18tcz0w"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-11T17:08:54.715571","column_name":"Normalized
+  Amount","created_on":"2025-10-11T17:08:54.715571","description":null,"expression":"  COALESCE(\r\n    (\r\n      (amount::numeric)
+  - (SELECT MIN(b2.amount) FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT
+  MAX(b2.amount) FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n      0\r\n    ),\r\n    0\r\n  )
+  \r\n","extra":"{}","filterable":true,"groupby":true,"id":87,"is_active":true,"is_dttm":true,"python_date_format":null,"type":null,"type_generic":2,"uuid":"47537f81-2a6a-4258-9845-3bd3c83a4b2b","verbose_name":"Normalized
+  Sum [0,1]"},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(Normalized
+  Sum [0,1])","optionName":"metric_28mid4f1i3g_dcrvfnstl8"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:15:08.236148","column_name":"amount","created_on":"2025-10-10T18:15:08.236148","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":5,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"uuid":"26176cb4-bf60-4582-a1ce-a7c6b9b52e3c","verbose_name":null},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(amount)","optionName":"metric_pc4bv7w0blq_pr2xvxtwmu"},false]],"annotation_layers":[],"row_limit":1000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[],"time_offsets":[]}],"form_data":{"datasource":"1__table","viz_type":"table","query_mode":"aggregate","groupby":[],"time_grain_sqla":"P1D","temporal_columns_lookup":{"Normalized
+  Amount":true},"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:15:08.236148","column_name":"amount","created_on":"2025-10-10T18:15:08.236148","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":5,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"uuid":"26176cb4-bf60-4582-a1ce-a7c6b9b52e3c","verbose_name":null},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(amount)","optionName":"metric_pc4bv7w0blq_pr2xvxtwmu"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-11T17:08:54.715571","column_name":"Normalized
+  Amount","created_on":"2025-10-11T17:08:54.715571","description":null,"expression":"  COALESCE(\r\n    (\r\n      (amount::numeric)
+  - (SELECT MIN(b2.amount) FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT
+  MAX(b2.amount) FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n      0\r\n    ),\r\n    0\r\n  )
+  \r\n","extra":"{}","filterable":true,"groupby":true,"id":87,"is_active":true,"is_dttm":true,"python_date_format":null,"type":null,"type_generic":2,"uuid":"47537f81-2a6a-4258-9845-3bd3c83a4b2b","verbose_name":"Normalized
+  Sum [0,1]"},"aggregate":"AVG","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"AVG(Normalized
+  Sum [0,1])","optionName":"metric_8bbrn7enwo8_aw1c4vx6luc"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:15:08.236148","column_name":"amount","created_on":"2025-10-10T18:15:08.236148","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":5,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"uuid":"26176cb4-bf60-4582-a1ce-a7c6b9b52e3c","verbose_name":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(amount)","optionName":"metric_jjd4prmoupr_zuc18tcz0w"},{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2025-10-11T17:08:54.715571","column_name":"Normalized
+  Amount","created_on":"2025-10-11T17:08:54.715571","description":null,"expression":"  COALESCE(\r\n    (\r\n      (amount::numeric)
+  - (SELECT MIN(b2.amount) FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT
+  MAX(b2.amount) FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n      0\r\n    ),\r\n    0\r\n  )
+  \r\n","extra":"{}","filterable":true,"groupby":true,"id":87,"is_active":true,"is_dttm":true,"python_date_format":null,"type":null,"type_generic":2,"uuid":"47537f81-2a6a-4258-9845-3bd3c83a4b2b","verbose_name":"Normalized
+  Sum [0,1]"},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(Normalized
+  Sum [0,1])","optionName":"metric_28mid4f1i3g_dcrvfnstl8"}],"all_columns":[],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","subject":"Normalized
+  Amount","operator":"TEMPORAL_RANGE","comparator":"No filter","expressionType":"SIMPLE"}],"order_by_cols":[],"order_desc":true,"row_limit":1000,"server_page_length":10,"table_timestamp_format":"smart_date","allow_render_html":true,"show_cell_bars":true,"color_pn":true,"comparison_color_scheme":"Green","comparison_type":"values","extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7a78290d-5212-4d02-b642-37b2f389f07e
+version: 1.0.0
+dataset_uuid: 1fbc27bd-ddb9-4799-bba6-9f619e9e13f9

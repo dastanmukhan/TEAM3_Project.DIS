@@ -1,0 +1,43 @@
+slice_name: Categorization
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 1__table
+  viz_type: pie
+  groupby:
+  - Amount Category
+  metric: count
+  adhoc_filters:
+  - clause: WHERE
+    subject: Normalized Amount
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  row_limit: '3'
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 70
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":1,"type":"table"},"force":false,"queries":[{"filters":[{"col":"Normalized
+  Amount","op":"TEMPORAL_RANGE","val":"No filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["Amount
+  Category"],"metrics":["count"],"orderby":[["count",false]],"annotation_layers":[],"row_limit":3,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"1__table","viz_type":"pie","groupby":["Amount
+  Category"],"metric":"count","adhoc_filters":[{"clause":"WHERE","subject":"Normalized
+  Amount","operator":"TEMPORAL_RANGE","comparator":"No filter","expressionType":"SIMPLE"}],"row_limit":"3","sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":5,"show_legend":true,"legendType":"scroll","legendOrientation":"top","label_type":"key","number_format":"SMART_NUMBER","date_format":"smart_date","show_labels":true,"labels_outside":true,"outerRadius":70,"innerRadius":30,"extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: a0833cce-c3f7-4b17-84fa-4616cff58b82
+version: 1.0.0
+dataset_uuid: 1fbc27bd-ddb9-4799-bba6-9f619e9e13f9

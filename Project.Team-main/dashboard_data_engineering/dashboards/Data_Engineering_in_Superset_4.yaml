@@ -1,0 +1,198 @@
+dashboard_title: Data Engineering in Superset
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: 6aa19211-f4b8-4fbb-9568-5827e5421010
+position:
+  CHART-explore-17-1:
+    children: []
+    id: CHART-explore-17-1
+    meta:
+      chartId: 17
+      height: 99
+      sliceName: Appointment from database
+      uuid: 789c14f0-d991-4ac4-b3da-244325b4e121
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-2zenBAIhb7YZSu6LVSAsk
+    type: CHART
+  CHART-explore-18-1:
+    children: []
+    id: CHART-explore-18-1
+    meta:
+      chartId: 18
+      height: 99
+      sliceName: Appointment from csv
+      uuid: d816a751-5a12-47b7-b52f-54ce372c66f0
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-2zenBAIhb7YZSu6LVSAsk
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-2zenBAIhb7YZSu6LVSAsk
+    - ROW-N-YGM8R4AV
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Data Engineering in Superset
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-2zenBAIhb7YZSu6LVSAsk:
+    children:
+    - CHART-explore-17-1
+    - CHART-explore-18-1
+    id: ROW-2zenBAIhb7YZSu6LVSAsk
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-N-YGM8R4AV:
+    children:
+    - CHART-SJWVVPUR
+    - CHART-4JBPWBAZ
+    - CHART-35356Q42
+    - CHART-91ZDUKAR
+    id: ROW-N-YGM8R4AV
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-SJWVVPUR:
+    children: []
+    id: CHART-SJWVVPUR
+    meta:
+      chartId: 20
+      height: 50
+      sliceName: Normalization
+      uuid: 7a78290d-5212-4d02-b642-37b2f389f07e
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-YGM8R4AV
+  CHART-4JBPWBAZ:
+    children: []
+    id: CHART-4JBPWBAZ
+    meta:
+      chartId: 19
+      height: 50
+      sliceName: Metrics
+      uuid: 34b15632-9e37-4307-b2fa-f4047ffe2e70
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-YGM8R4AV
+  CHART-35356Q42:
+    children: []
+    id: CHART-35356Q42
+    meta:
+      chartId: 21
+      height: 50
+      sliceName: Categorization
+      uuid: a0833cce-c3f7-4b17-84fa-4616cff58b82
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-YGM8R4AV
+  CHART-91ZDUKAR:
+    children: []
+    id: CHART-91ZDUKAR
+    meta:
+      chartId: 22
+      height: 50
+      sliceName: Category by table
+      uuid: c253b787-ebf8-44c3-bee8-88f54b39255d
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-YGM8R4AV
+metadata:
+  chart_configuration:
+    '17':
+      id: 17
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 18
+    '18':
+      id: 18
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 17
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 17
+    - 18
+  map_label_colors:
+    count: '#1FA8C9'
+    SUM(appointment_count): '#1FA8C9'
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors: []
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-ELh4z9lrQvdW4Eo7_HnNf
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: filtering by date
+    filterType: filter_select
+    targets:
+    - column:
+        name: appointment_date
+      datasetUuid: c76f4232-227b-446e-b419-569436f79c0b
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0

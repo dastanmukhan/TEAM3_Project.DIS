@@ -1,0 +1,462 @@
+dashboard_title: Appointments
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: 16723b11-3e36-40bf-8a63-c1d7aa993005
+position:
+  CHART-explore-13-1:
+    children: []
+    id: CHART-explore-13-1
+    meta:
+      chartId: 13
+      height: 58
+      sliceName: HEATMAP
+      uuid: f043b43f-fed5-4234-b421-4a49ffda72f9
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-9jiQWBbmDYXXXA8hIJHMH
+    type: CHART
+  CHART-explore-14-1:
+    children: []
+    id: CHART-explore-14-1
+    meta:
+      chartId: 14
+      height: 63
+      sliceName: 'Sunburst: Doctors Load'
+      uuid: 50d24a64-35a5-4f8f-b2ba-c44590024bcd
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-K1gTJfPc5V1sDBreAmshV
+    type: CHART
+  CHART-explore-15-1:
+    children: []
+    id: CHART-explore-15-1
+    meta:
+      chartId: 15
+      height: 64
+      sliceName: 'Treemap: Doctors Contribution'
+      uuid: e2196bb1-6e19-4d11-9814-6481423301f1
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-K1gTJfPc5V1sDBreAmshV
+    type: CHART
+  CHART-explore-16-1:
+    children: []
+    id: CHART-explore-16-1
+    meta:
+      chartId: 16
+      height: 52
+      sliceName: 'Word Cloud: Frequency of treatment description'
+      uuid: 95d609a6-3369-4642-9809-40bed39c3367
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-rlxlDIh3l4y0KewsKcGs4
+    type: CHART
+  CHART-explore-2-1:
+    children: []
+    id: CHART-explore-2-1
+    meta:
+      chartId: 2
+      height: 73
+      sliceName: Distribution of Reception Statuses
+      uuid: fee908a5-1dd6-44f0-abba-ac1dc802efc7
+      width: 9
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-5i3nqwjDMdfHh9XZrEaTH
+    type: CHART
+  CHART-explore-3-1:
+    children: []
+    id: CHART-explore-3-1
+    meta:
+      chartId: 3
+      height: 51
+      sliceName: Appointments by Reason of Visit
+      uuid: 882de599-edae-40e5-8ae5-ceebc6f5ab8a
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-rlxlDIh3l4y0KewsKcGs4
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-5i3nqwjDMdfHh9XZrEaTH
+    - ROW-rlxlDIh3l4y0KewsKcGs4
+    - ROW-9jiQWBbmDYXXXA8hIJHMH
+    - ROW-K1gTJfPc5V1sDBreAmshV
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Appointments
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-5i3nqwjDMdfHh9XZrEaTH:
+    children:
+    - CHART-explore-2-1
+    id: ROW-5i3nqwjDMdfHh9XZrEaTH
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-9jiQWBbmDYXXXA8hIJHMH:
+    children:
+    - CHART-explore-13-1
+    - CHART-explore-15-1
+    id: ROW-9jiQWBbmDYXXXA8hIJHMH
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-K1gTJfPc5V1sDBreAmshV:
+    children:
+    - CHART-explore-14-1
+    id: ROW-K1gTJfPc5V1sDBreAmshV
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-rlxlDIh3l4y0KewsKcGs4:
+    children:
+    - CHART-explore-3-1
+    - CHART-explore-16-1
+    id: ROW-rlxlDIh3l4y0KewsKcGs4
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '2':
+      id: 2
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 13
+        - 14
+        - 15
+        - 16
+    '3':
+      id: 3
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 2
+        - 13
+        - 14
+        - 15
+        - 16
+    '14':
+      id: 14
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 2
+        - 3
+        - 13
+        - 15
+        - 16
+    '15':
+      id: 15
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 2
+        - 3
+        - 13
+        - 14
+        - 16
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 2
+    - 3
+    - 13
+    - 14
+    - 15
+    - 16
+  map_label_colors:
+    Consultation: '#1FA8C9'
+    Emergency: '#454E7C'
+    Follow-up: '#5AC189'
+    Checkup: '#FF7F44'
+    Therapy: '#666666'
+    count: '#1FA8C9'
+    SUM(Appointment Count): '#1FA8C9'
+    Central Hospital: '#454E7C'
+    Oncology: '#A38F79'
+    Emily Anderson: '#5AC189'
+    Leah Snyder: '#FF7F44'
+    John Mason: '#666666'
+    Veronica Kelley: '#E04355'
+    Elizabeth Pierce: '#FCC700'
+    Michelle Hart: '#A868B7'
+    Emily Mcmahon: '#3CCCCB'
+    Jesse Silva: '#8FD3E4'
+    Edward Woodward: '#A1A6BD'
+    Mary Martin: '#ACE1C4'
+    Pediatrics: '#5AC189'
+    Alex Davis: '#666666'
+    Ronald Huber: '#FEC0A1'
+    Melanie Smith: '#B2B2B2'
+    David Jones: '#FF7F44'
+    Kelly Hall: '#EFA1AA'
+    Sarah Smith: '#E04355'
+    Ryan Huerta: '#FDE380'
+    Mark Clark: '#D3B3DA'
+    Thomas Williams: '#9EE5E5'
+    Kelli Best: '#D1C6BC'
+    Dermatology: '#FCC700'
+    Stephanie Calderon: '#D3B3DA'
+    Joshua Calhoun: '#9EE5E5'
+    Richard Montgomery: '#D1C6BC'
+    Jean Miller: '#454E7C'
+    Sarah Taylor: '#A868B7'
+    Brad Dudley: '#3CCCCB'
+    Bonnie Manning: '#A38F79'
+    Adam Bridges: '#8FD3E4'
+    Jason Rose: '#A1A6BD'
+    Patricia Martin: '#ACE1C4'
+    Westside Clinic: '#3CCCCB'
+    Alicia Barber: '#FEC0A1'
+    Leah Brown: '#B2B2B2'
+    Lance Solis: '#EFA1AA'
+    Melissa Smith: '#FDE380'
+    Mary Kirby: '#8FD3E4'
+    Heather Martin: '#A1A6BD'
+    David Price: '#ACE1C4'
+    Michael Harris: '#FEC0A1'
+    Robert Davis: '#8FD3E4'
+    Mark Vang: '#B2B2B2'
+    James Vasquez: '#EFA1AA'
+    Crystal Short: '#FDE380'
+    Kenneth Santiago: '#D3B3DA'
+    Cindy Hull: '#9EE5E5'
+    James Marshall: '#D1C6BC'
+    Cole Gallagher: '#454E7C'
+    Derek Martinez: '#5AC189'
+    Robert Walls: '#FF7F44'
+    James Sullivan: '#666666'
+    David Taylor: '#A1A6BD'
+    Sheila Lynch: '#E04355'
+    Christopher Anderson: '#FCC700'
+    Matthew Lucas: '#A868B7'
+    Patricia Lowe: '#A38F79'
+    Rachel Miller: '#3CCCCB'
+    Michael Baker: '#A38F79'
+    Deborah Steele: '#454E7C'
+    Linda Brown: '#ACE1C4'
+    Andrew Chavez: '#5AC189'
+    Eastside Clinic: '#FEC0A1'
+    Anthony Jackson: '#FF7F44'
+    Rachel Davis: '#666666'
+    Jennifer Larson: '#B2B2B2'
+    Samantha Kelly: '#EFA1AA'
+    Crystal Ramsey: '#FDE380'
+    Angela Curtis: '#D3B3DA'
+    Joseph Crawford: '#9EE5E5'
+    Bryan Mitchell: '#D1C6BC'
+    Scott Durham: '#E04355'
+    Gwendolyn Garza: '#FCC700'
+    Willie Delgado: '#A868B7'
+    Vincent Gilbert: '#FF7F44'
+    Leah Reynolds: '#666666'
+    Justin Wright: '#E04355'
+    Linda Wilson: '#FDE380'
+    Kaitlyn Hernandez: '#FCC700'
+    Kevin Santos: '#A868B7'
+    Andrea Frederick: '#3CCCCB'
+    Jane Davis: '#B2B2B2'
+    Justin Tate: '#A38F79'
+    Erik Bennett: '#8FD3E4'
+    Miranda Mcguire: '#A1A6BD'
+    Jane Smith: '#EFA1AA'
+    Anna Patterson: '#ACE1C4'
+    Terri Williams: '#FEC0A1'
+    Juan Griffin: '#454E7C'
+    Standard procedure: '#1FA8C9'
+    Advanced protocol: '#454E7C'
+    Basic screening: '#5AC189'
+    Follow-up consultation: '#FF7F44'
+    Routine checkup: '#A38F79'
+    Radiotherapy dose: '#666666'
+    Oncology follow-up: '#E04355'
+    Therapeutic session: '#FCC700'
+    Ultrasound examination: '#A868B7'
+    Allergy testing: '#3CCCCB'
+    Post-operative care: '#B2B2B2'
+    Endoscopy procedure: '#8FD3E4'
+    Vaccination administration: '#A1A6BD'
+    Physiotherapy session: '#ACE1C4'
+    Minor surgical procedure: '#FEC0A1'
+    Initial assessment: '#EFA1AA'
+    Dermatological treatment: '#FDE380'
+    Diagnostic imaging: '#D3B3DA'
+    Biopsy sampling: '#9EE5E5'
+    Rehabilitation exercises: '#D1C6BC'
+    Pediatric evaluation: '#454E7C'
+    Emergency intervention: '#5AC189'
+    Pain management plan: '#FF7F44'
+    Blood tests and analysis: '#666666'
+    Cardiac monitoring: '#E04355'
+  color_scheme: ''
+  refresh_frequency: 0
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  shared_label_colors:
+  - Adam Bridges
+  - Alex Davis
+  - Alicia Barber
+  - Andrea Frederick
+  - Andrew Chavez
+  - Angela Curtis
+  - Anna Patterson
+  - Anthony Jackson
+  - Bonnie Manning
+  - Brad Dudley
+  - Bryan Mitchell
+  - Christopher Anderson
+  - Cindy Hull
+  - Cole Gallagher
+  - Crystal Ramsey
+  - Crystal Short
+  - David Jones
+  - David Price
+  - David Taylor
+  - Deborah Steele
+  - Derek Martinez
+  - Dermatology
+  - Edward Woodward
+  - Elizabeth Pierce
+  - Emily Anderson
+  - Emily Mcmahon
+  - Erik Bennett
+  - Gwendolyn Garza
+  - Heather Martin
+  - James Marshall
+  - James Sullivan
+  - James Vasquez
+  - Jane Davis
+  - Jane Smith
+  - Jason Rose
+  - Jean Miller
+  - Jennifer Larson
+  - Jesse Silva
+  - John Mason
+  - Joseph Crawford
+  - Joshua Calhoun
+  - Juan Griffin
+  - Justin Tate
+  - Justin Wright
+  - Kaitlyn Hernandez
+  - Kelli Best
+  - Kelly Hall
+  - Kenneth Santiago
+  - Kevin Santos
+  - Lance Solis
+  - Leah Brown
+  - Leah Reynolds
+  - Leah Snyder
+  - Linda Brown
+  - Linda Wilson
+  - Mark Clark
+  - Mark Vang
+  - Mary Kirby
+  - Mary Martin
+  - Matthew Lucas
+  - Melanie Smith
+  - Melissa Smith
+  - Michael Baker
+  - Michael Harris
+  - Michelle Hart
+  - Miranda Mcguire
+  - Oncology
+  - Patricia Lowe
+  - Patricia Martin
+  - Pediatrics
+  - Rachel Davis
+  - Rachel Miller
+  - Richard Montgomery
+  - Robert Davis
+  - Robert Walls
+  - Ronald Huber
+  - Ryan Huerta
+  - SUM(Appointment Count)
+  - Samantha Kelly
+  - Sarah Smith
+  - Sarah Taylor
+  - Scott Durham
+  - Sheila Lynch
+  - Stephanie Calderon
+  - Terri Williams
+  - Thomas Williams
+  - Veronica Kelley
+  - Vincent Gilbert
+  - Willie Delgado
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-H4dpr69hIzEykAE9Hi2W7
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: filtering by reason of visit
+    filterType: filter_select
+    targets:
+    - column:
+        name: reason_for_visit
+      datasetUuid: c76f4232-227b-446e-b419-569436f79c0b
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    type: NATIVE_FILTER
+    description: ''
+version: 1.0.0

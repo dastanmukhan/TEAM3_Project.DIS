@@ -1,0 +1,84 @@
+table_name: Sunburst Doctors Hierarchy
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: hospital_db
+schema: public
+sql: "SELECT \r\n    d.hospital_branch AS \"Hospital Branch\",  \r\n    d.specialization\
+  \ AS \"Specialization\",   \r\n    d.first_name || ' ' || d.last_name AS \"Doctor\
+  \ Name\",  \r\n    COUNT(a.appointment_id) AS \"Appointment Count\"  \r\nFROM doctors\
+  \ d \r\nLEFT JOIN appointments a ON d.doctor_id = a.doctor_id \r\nWHERE a.appointment_date\
+  \ >= '2023-01-01'  \r\nGROUP BY d.hospital_branch, d.specialization, d.doctor_id,\
+  \ d.first_name, d.last_name \r\nHAVING COUNT(a.appointment_id) > 0  \r\nORDER BY\
+  \ \"Hospital Branch\", \"Specialization\", \"Appointment Count\" DESC;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: f10dad05-0ff2-4180-871e-2dc1a1c4c5dc
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: Appointment Count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Hospital Branch
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Doctor Name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: Specialization
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: ac0f538b-a2d9-46ee-a81b-2d655da6d00e

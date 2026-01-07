@@ -1,0 +1,177 @@
+table_name: billing
+main_dttm_col: Normalized Amount
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: hospital_db
+schema: public
+sql: ''
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 1fbc27bd-ddb9-4799-bba6-9f619e9e13f9
+metrics:
+- metric_name: growth
+  verbose_name: Growth Amount (%) H2 vs H1 2023
+  metric_type: null
+  expression: "ROUND(\n        CAST(\n            100.0 * (\n                SUM(amount)\
+    \ FILTER (WHERE EXTRACT(MONTH FROM bill_date::date) BETWEEN 7 AND 12)\n      \
+    \          -\n                SUM(amount) FILTER (WHERE EXTRACT(MONTH FROM bill_date::date)\
+    \ BETWEEN 1 AND 6)\n            ) / NULLIF(\n                SUM(amount) FILTER\
+    \ (WHERE EXTRACT(MONTH FROM bill_date::date) BETWEEN 1 AND 6),\n             \
+    \   0\n            ) AS numeric\n        ), 2\n    )"
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: mediana
+  verbose_name: Median Account Amount
+  metric_type: null
+  expression: PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY amount)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: average
+  verbose_name: Average Bill Amount
+  metric_type: null
+  expression: AVG(amount)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: null
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: {}
+  warning_text: null
+columns:
+- column_name: Normalized Amount
+  verbose_name: Normalized Sum [0,1]
+  is_dttm: true
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "  COALESCE(\r\n    (\r\n      (amount::numeric) - (SELECT MIN(b2.amount)\
+    \ FROM billing b2)\r\n    )\r\n    /\r\n    NULLIF(\r\n      ((SELECT MAX(b2.amount)\
+    \ FROM billing b2) - (SELECT MIN(b2.amount) FROM billing b2))::numeric,\r\n  \
+    \    0\r\n    ),\r\n    0\r\n  ) \r\n"
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: Amount Category
+  verbose_name: Category Amounts
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: "CASE\r\nWHEN amount < 1000 THEN 'Low'\r\nWHEN amount >= 1000 AND amount\
+    \ <= 3000 THEN 'Medium'\r\nELSE 'High'\r\nEND"
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: amount
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DOUBLE PRECISION
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: payment_status
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: bill_date
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: payment_method
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: treatment_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: patient_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: bill_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: TEXT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: ac0f538b-a2d9-46ee-a81b-2d655da6d00e

@@ -1,0 +1,75 @@
+slice_name: Geo Visualization
+description: null
+certified_by: null
+certification_details: null
+viz_type: deck_scatter
+params:
+  datasource: 4__table
+  viz_type: deck_scatter
+  slice_id: 12
+  spatial:
+    type: latlong
+    latCol: latitude
+    lonCol: longitude
+  row_limit: 100
+  filter_nulls: false
+  adhoc_filters: []
+  mapbox_style: mapbox://styles/mapbox/light-v9
+  autozoom: true
+  viewport:
+    bearing: 0
+    latitude: 31.222656842808707
+    longitude: 6.85236157047845
+    pitch: 0
+    zoom: 1
+  point_radius_fixed:
+    type: metric
+    value:
+      aggregate: COUNT_DISTINCT
+      column:
+        advanced_data_type: null
+        changed_on: '2025-10-10T18:16:27.620816'
+        column_name: patient_id
+        created_on: '2025-10-10T18:16:27.620816'
+        description: null
+        expression: null
+        extra: '{}'
+        filterable: true
+        groupby: true
+        id: 23
+        is_active: true
+        is_dttm: false
+        python_date_format: null
+        type: TEXT
+        type_generic: 1
+        uuid: c2059e1b-56ed-47b9-8bfb-89b9b3124907
+        verbose_name: null
+      datasourceWarning: false
+      expressionType: SIMPLE
+      hasCustomLabel: false
+      label: COUNT_DISTINCT(patient_id)
+      optionName: metric_vx3bh7jkroe_i4746vj1vz9
+      sqlExpression: null
+  point_unit: square_m
+  min_radius: 2
+  max_radius: 250
+  multiplier: 1
+  color_picker:
+    a: 1
+    b: 0
+    g: 92
+    r: 243
+  legend_position: bl
+  legend_format: SMART_NUMBER
+  color_scheme: presetColors
+  js_columns: []
+  time_grain_sqla: null
+  granularity: null
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":4,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"time_grain_sqla":null,"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"4__table","viz_type":"deck_scatter","slice_id":12,"spatial":{"type":"latlong","latCol":"latitude","lonCol":"longitude"},"row_limit":100,"filter_nulls":false,"adhoc_filters":[],"mapbox_style":"mapbox://styles/mapbox/light-v9","autozoom":true,"viewport":{"bearing":0,"latitude":31.222656842808707,"longitude":6.85236157047845,"pitch":0,"zoom":1},"point_radius_fixed":{"type":"metric","value":{"aggregate":"COUNT_DISTINCT","column":{"advanced_data_type":null,"changed_on":"2025-10-10T18:16:27.620816","column_name":"patient_id","created_on":"2025-10-10T18:16:27.620816","description":null,"expression":null,"extra":"{}","filterable":true,"groupby":true,"id":23,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"uuid":"c2059e1b-56ed-47b9-8bfb-89b9b3124907","verbose_name":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"COUNT_DISTINCT(patient_id)","optionName":"metric_vx3bh7jkroe_i4746vj1vz9","sqlExpression":null}},"point_unit":"square_m","min_radius":2,"max_radius":250,"multiplier":1,"color_picker":{"a":1,"b":0,"g":92,"r":243},"legend_position":"bl","legend_format":"SMART_NUMBER","color_scheme":"presetColors","js_columns":[],"time_grain_sqla":null,"granularity":null,"extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 9da419ac-c57d-4dc5-ada1-9f33b531df3b
+version: 1.0.0
+dataset_uuid: edfde139-76c5-4fa4-b2cd-6272a13ee676

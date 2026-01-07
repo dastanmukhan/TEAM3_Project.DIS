@@ -1,0 +1,62 @@
+slice_name: Patients by Gender
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 4__table
+  viz_type: pie
+  groupby:
+  - gender
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: patient_id
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 23
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: TEXT
+      type_generic: 1
+      verbose_name: null
+      warning_markdown: null
+    aggregate: COUNT_DISTINCT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: COUNT_DISTINCT(patient_id)
+    optionName: metric_y49h98m1gf9_dl7rnbmf6ht
+  adhoc_filters: []
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  roseType: null
+  show_legend: true
+  legendType: scroll
+  legendOrientation: bottom
+  legendMargin: null
+  label_type: key_value
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  show_total: true
+  outerRadius: 70
+  donut: true
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: '{"datasource":{"id":4,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["gender"],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"patient_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":23,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(patient_id)","optionName":"metric_y49h98m1gf9_dl7rnbmf6ht"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"patient_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":23,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(patient_id)","optionName":"metric_y49h98m1gf9_dl7rnbmf6ht"},false]],"annotation_layers":[],"row_limit":100,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"4__table","viz_type":"pie","groupby":["gender"],"metric":{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"patient_id","description":null,"expression":null,"filterable":true,"groupby":true,"id":23,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"verbose_name":null,"warning_markdown":null},"aggregate":"COUNT_DISTINCT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT_DISTINCT(patient_id)","optionName":"metric_y49h98m1gf9_dl7rnbmf6ht"},"adhoc_filters":[],"row_limit":100,"sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":5,"roseType":null,"show_legend":true,"legendType":"scroll","legendOrientation":"bottom","legendMargin":null,"label_type":"key_value","number_format":"SMART_NUMBER","date_format":"smart_date","show_labels":true,"labels_outside":true,"show_total":true,"outerRadius":70,"donut":true,"innerRadius":30,"extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: a190d398-5de7-4672-aea6-ca73def16667
+version: 1.0.0
+dataset_uuid: edfde139-76c5-4fa4-b2cd-6272a13ee676
