@@ -45,9 +45,12 @@ These insights help hospitals deliver better care while maintaining operational 
 * Appointment Trends Visualization
 * Doctor Performance Analysis
 
-*(Add real screenshots from the `/charts` or dashboard exports)*
+<img width="1524" height="678" alt="image" src="https://github.com/user-attachments/assets/16d9abc1-367c-4db1-acd2-c74d81102a4b" />
+<img width="1027" height="711" alt="image" src="https://github.com/user-attachments/assets/26d65694-b6eb-4be2-bdaf-40891fe4a24a" />
+<img width="1416" height="533" alt="image" src="https://github.com/user-attachments/assets/e4e2351a-677d-4fe7-b0a7-04a16864aae2" />
 
----
+
+
 
 ## 🚀 How to Run the Project
 
@@ -156,6 +159,7 @@ The ER diagram represents the hospital data model, covering relationships betwee
 * Ready for real-world hospital environments
 
 ---
+
 
 
 
